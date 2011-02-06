@@ -1,5 +1,5 @@
-Runloop
-=======
+Runloop 1.0
+===========
 
 ### A jQuery Plugin for Comprehensive Animations
 
