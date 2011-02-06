@@ -189,11 +189,11 @@
                   
                   if (execLog.indexOf( 'at' + step ) == -1 && map['at' + step]) {
                      
-                     // Execute the stored function for this keyframe
-                     map['at' + step]();
-                     
                      // Log this keyframe location, to prevent double-execution
                      execLog.push( 'at' + step );
+                     
+                     // Execute the stored function for this keyframe
+                     map['at' + step]();
                   }
                },
                easing: 'linear',
