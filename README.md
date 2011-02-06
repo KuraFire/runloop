@@ -16,8 +16,9 @@ Full usage documentation will be prepared for the 1.0 release.
 
 ### Known issues
 
-* Currently there is a bug in IE8 and below. It seems to have something to do with 
-  the jQuery library, but we're still investigating it.
+* jQuery (1.5 and below) has a bug in its .animate() step: method, which triggers an
+  error in IE8 and below. The 1.0 version has sidestepped this by using "top" instead
+  of "z-index".
 
 Runloop is Copyright © 2011 Faruk Ates; dual licensed under the MIT or BSD licenses.
 

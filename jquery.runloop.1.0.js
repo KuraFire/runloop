@@ -1,5 +1,5 @@
 /*
- * jQuery Runloop Plugin
+ * jQuery Runloop Plugin -- version 1.0
  * Copyright 2011, Faruk Ates
  * Dual licensed under the MIT or BSD licenses
  *
@@ -199,7 +199,7 @@
                duration: duration,
                
                step: function( step ) {
-                  console.log('step: ' + step);
+                  
                   currentStep = step;
                   
                   // Default is floor
