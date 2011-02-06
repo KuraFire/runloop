@@ -22,5 +22,5 @@ jQuery (1.5 and below) has [a bug in its .animate() step: method](http://bugs.jq
 an error in IE8 and below. The 1.0 version, however, has sidestepped this by
 using "top" instead of "z-index".
 
-Runloop is Copyright © 2011 Faruk Ates; dual licensed under the MIT or BSD licenses.
+Runloop is Copyright © 2011 [http://farukat.es/](Faruk Ateş); dual licensed under the MIT or BSD licenses.
 
