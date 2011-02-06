@@ -12,13 +12,17 @@ Runloop was created to have more power, more control and less hassle than dealin
 with jQuery .animate() callbacks. It hooks into jQuery's Effects Queue by design,
 to avoid timing conflicts in the case of doing many multiple .animate() calls.
 
-Full usage documentation will be prepared for the 1.0 release.
+[Full documentation](https://github.com/KuraFire/runloop/blob/master/documentation.md)
+
+[Demo](http://files.farukat.es/creations/runloop/)
 
 ### Known issues
 
-* jQuery (1.5 and below) has a bug in its .animate() step: method, which triggers an
-  error in IE8 and below. The 1.0 version has sidestepped this by using "top" instead
-  of "z-index".
+Currently there are no known issues for the 1.0 release.
+
+jQuery (1.5 and below) has a bug in its .animate() step: method, which triggers
+an error in IE8 and below. The 1.0 version, however, has sidestepped this by
+using "top" instead of "z-index".
 
 Runloop is Copyright © 2011 Faruk Ates; dual licensed under the MIT or BSD licenses.
 
