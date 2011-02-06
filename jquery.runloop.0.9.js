@@ -74,13 +74,16 @@
             var at = makeAt(atPercentage);
             
             if (at) {
-               if (typeof map[at] === 'function') {
-                  map[at] = function() {
-                     map[at]();
-                     func();
-                  }
-               } else {
+               var oldAt = map[at];
+               if (typeof map[at] != 'function') {
                   map[at] = func;
+               } else {
+                  map[at] = function() {
+                     if (oldAt) {
+                        oldAt();
+                     }
+                     func();
+                  };
                }
             }
          },
