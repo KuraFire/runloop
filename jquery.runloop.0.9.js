@@ -39,7 +39,7 @@
          'roundType': 'floor',
          
          // base 5 is used (and recommended to be left as-is) for loops from 500ms and up; < 500ms will always switch to base 10!
-         'base': 5,
+         'base': 5
       };
       if (settings) $.extend(config, settings);
       
