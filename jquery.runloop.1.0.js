@@ -6,8 +6,8 @@
  * Based on the concept by Ben Nadel:
  * http://j.mp/ben-nadel-concept
  * 
- * A more detailed introduction is coming soon to:
- * http://farukat.es/
+ * A more detailed introduction is here:
+ * http://farukat.es/p514
 */
 
 /*
