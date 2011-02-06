@@ -32,11 +32,11 @@ This is a simple example:
 	loop.play(1000); // duration set in milliseconds
 	</script>
 
-## Public Methods
+# Public Methods
 
 The following are all the available public methods on your newly created runloop object:
 
-### .addKey( atPercentage, func )
+## .addKey( atPercentage, func )
 
 *Returns: nothing*
 
@@ -46,37 +46,37 @@ The following are all the available public methods on your newly created runloop
 
 You can stack multiple function calls to the same keyframe location. If you do so, Runloop will wrap the existing functions inside a new function call and execute each function in the order you supplied it with.
 
-### .removeKey( atPercentage )
+## .removeKey( atPercentage )
 
 *Returns: nothing*
 
 **atPercentage** The keyframe to clear out. If multiple functions were stacked on a single keyframe, all of them will be removed.
 
-### .addMap( newMap )
+## .addMap( newMap )
 
 *Returns: nothing*
 
 **newMap** A pre-compiled map (hash / associative array) with multiple keyframe-function associations. This allows you to reuse keyframes easily between multiple runloops. Internally uses .addKey() so it won’t overwrite any existing keyframes, merely add to them.
 
-### .getMap()
+## .getMap()
 
 *Returns: current Map object of the runloop*
 
 If you ever need to examine the map of a runloop at any point, you can use `yourRunloop.getMap();`
 
-### .reset()
+## .reset()
 
 *Returns: nothing*
 
 Resets the runloop to initial state. The execution log will be cleared, and the runloop will be returned to (step) 0.
 
-### .pause()
+## .pause()
 
 *Returns: nothing*
 
 Pauses the runloop animation. **Important note**: this does not pause any animations you may have running as a result of keyframe function code being executed. It merely stops the main runloop in its track, continuing with the *next* step in the process when you call `.play()`.
 
-### .play( [ duration ], [ callback ] )
+## .play( [ duration ], [ callback ] )
 
 *Returns: nothing*
 
@@ -88,5 +88,5 @@ Starts the runloop.
 
 
 
-Runloop is Copyright © 2011 Faruk Ates; dual licensed under the MIT or BSD licenses.
+Runloop is Copyright © 2011 <a href="http://farukat.es/">Faruk Ateş</a>; dual licensed under the MIT or BSD licenses.
 
