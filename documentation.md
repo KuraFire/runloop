@@ -90,6 +90,12 @@ Starts the runloop.
 
 **callback** Optional callback to be executed once the runloop reaches 100%. Is the same as doing `.addKey('100%', func)`.
 
-***
+# Acknowledgements
 
-Runloop is Copyright © 2011 <a href="http://farukat.es/">Faruk Ateş</a>; dual licensed under the MIT or BSD licenses.
+Thanks go out to:
+
+* Ben Nadal for his concept inspiring me to make this plugin;
+* Jonathan Snook for feedback along the way;
+* Bradley Wright, Michael Burgstahler & Francesco Spreafico for IE testing.
+
+Runloop is **Copyright © 2011 <a href="http://farukat.es/">Faruk Ateş</a>**, and is dual-licensed under the **MIT and BSD** licenses.
