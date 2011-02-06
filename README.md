@@ -12,9 +12,7 @@ Runloop was created to have more power, more control and less hassle than dealin
 with jQuery .animate() callbacks. It hooks into jQuery's Effects Queue by design,
 to avoid timing conflicts in the case of doing many multiple .animate() calls.
 
-## [Full documentation](https://github.com/KuraFire/runloop/blob/master/documentation.md)
-
-## [Demo](http://files.farukat.es/creations/runloop/)
+### [Full documentation](https://github.com/KuraFire/runloop/blob/master/documentation.md) • [Demo](http://files.farukat.es/creations/runloop/)
 
 ### Known issues
 
