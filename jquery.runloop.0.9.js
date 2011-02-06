@@ -147,7 +147,7 @@
             execLog = [];
             
             // Explicitly set runloop back to 0
-            $(runloop).css({'z-index':0});
+            $(runloop).css({'top':0});
          },
          
          // Pauses the runloop at the current interval. 
@@ -177,7 +177,7 @@
             // We're in an ongoing runloop; shorten duration to remaining time
             if (remainingDuration) {
                duration = remainingDuration;
-               $(runloop).css('z-index', Math.floor(currentStep)); // TODO: is this needed?
+               $(runloop).css('top', Math.floor(currentStep)); // TODO: is this needed?
             }
             // It is important to note at this point that it is entirely possible to still have
             //   a config.base of 5, but a duration that is less than 500ms. This unusual scenario is,
@@ -194,12 +194,12 @@
             // Store duration in case it gets paused
             currentDuration = duration;
             
-            $(runloop).animate({'z-index':'100'}, {
+            $(runloop).animate({'top':'100'}, {
 
                duration: duration,
                
                step: function( step ) {
-                  
+                  console.log('step: ' + step);
                   currentStep = step;
                   
                   // Default is floor
