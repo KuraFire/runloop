@@ -9,15 +9,9 @@ From the Readme:
 
 > Runloop was created to have more power, more control and less hassle than dealing with jQuery `.animate()` callbacks. It hooks into jQuery's Effects Queue by design, to avoid timing conflicts in the case of doing many multiple `.animate()` calls.
 
-<<<<<<< HEAD
 [Runloop Demo](http://files.farukat.es/creations/runloop/)
 
 [Announcement post](http://farukat.es/p514)
-=======
-Demo: http://files.farukat.es/creations/runloop/
-
-Announcement post: http://farukat.es/p514
->>>>>>> 516547cb387f9595cf311c883613f26e454bafdb
 
 ## Basic Usage
 
@@ -96,6 +90,6 @@ Starts the runloop.
 
 **callback** Optional callback to be executed once the runloop reaches 100%. Is the same as doing `.addKey('100%', func)`.
 
-* * *
+***
 
 Runloop is Copyright © 2011 <a href="http://farukat.es/">Faruk Ateş</a>; dual licensed under the MIT or BSD licenses.
