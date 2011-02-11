@@ -53,7 +53,7 @@
       map = {},
       
       // Stores each mapped keyframe point once it has been executed, to prevent double executions
-      execLog = [],
+      execLog = {},
       
       // Internals for keeping track of things
       currentDuration = false,
@@ -65,25 +65,6 @@
          var val = parseInt(at.toString().match(/[0-9]+/g));
          return (isNaN(val)) ? false : "at" + val;
       };
-      
-      // Add indexOf support if needed:
-      if (!Array.prototype.indexOf) {
-         Array.prototype.indexOf = function(elt)
-         {
-            var len = this.length >>> 0;
-            var from = Number(arguments[1]) || 0;
-            from = (from < 0) ? Math.ceil(from) : Math.floor(from);
-            if (from < 0) {
-               from += len;
-            }
-            for (; from < len; from++) {
-               if (from in this && this[from] === elt) {
-                  return from;
-               }
-            }
-            return -1;
-         };
-      }
 
       // Public methods:
       return {
@@ -144,7 +125,7 @@
             currentDuration = false;
             remainingDuration = false;
             currentStep = 0;
-            execLog = [];
+            execLog = {};
             
             // Explicitly set runloop back to 0
             $(runloop).css({'top':0});
@@ -199,7 +180,6 @@
                duration: duration,
                
                step: function( step ) {
-                  
                   currentStep = step;
                   
                   // Default is floor
@@ -209,10 +189,10 @@
                      step = Math.floor( step / config.base ) * config.base;
                   }
                   
-                  if (execLog.indexOf( 'at' + step ) == -1 && map['at' + step]) {
+                  if (!(step in execLog) && map['at' + step]) {
                      
                      // Log this keyframe location, to prevent double-execution
-                     execLog.push( 'at' + step );
+                     execLog[step] = true;
                      
                      // Execute the stored function for this keyframe
                      map['at' + step]();
@@ -224,7 +204,7 @@
                   currentDuration = false;
                   remainingDuration = false;
                   currentStep = 0;
-                  execLog = [];
+                  execLog = {};
                }
             });
          }
