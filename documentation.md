@@ -1,5 +1,5 @@
-Runloop 1.0 - Documentation
-===========================
+Runloop 1.0.1 - Documentation
+=============================
 
 ### Runloop is A jQuery Plugin for Comprehensive Animations
 
