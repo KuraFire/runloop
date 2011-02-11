@@ -1,32 +1,13 @@
 /*
- * jQuery Runloop Plugin -- version 1.0
+ * jQuery Runloop Plugin -- version 1.0.1
  * Copyright 2011, Faruk Ates
  * Dual licensed under the MIT or BSD licenses
  *
  * Based on the concept by Ben Nadel:
  * http://j.mp/ben-nadel-concept
  * 
- * A more detailed introduction is here:
- * http://farukat.es/p514
-*/
-
-/*
- * USAGE:
- * 
- * var loop = jQuery.runloop();
- * 
- * loop.addKey('25%', function(){ // Some code or animations here  });
- * loop.addKey('50%', function(){ // Different code/animations  });
- * loop.addKey('75%', function(){ // Even more different code/animations!  });
- * loop.play(1000); // duration set in milliseconds
- * 
- * Also available:
- * loop.pause()  - pauses the main run loop, but does NOT pause any animations triggered in keyframes
- * loop.reset()  - resets the main run loop to 0
- * loop.addMap() - add a map with multiple keyframes at once, e.g. { '20%': func, '50%': func2 }
- * loop.getMap() - to see what the keyframe map for the current runloop object is
- * loop.removeKey() - pass in a percentage/keyframe point to remove it from the current map
- * 
+ * Documentation:
+ * https://github.com/KuraFire/runloop/blob/master/documentation.md
 */
 
 (function( $ ){
