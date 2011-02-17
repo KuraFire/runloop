@@ -25,7 +25,7 @@
       if (settings) $.extend(config, settings);
       
       // Version!
-      var version = "0.9",
+      var version = "1.0.1",
       
       // Create the dummy object in nodespace that we're running the animation on
       runloop = document.createElement('div'),
