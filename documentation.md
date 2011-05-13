@@ -1,5 +1,11 @@
-Runloop 1.0.1 - Documentation
+Runloop 1.0.2 - Documentation
 =============================
+
+## 1.0.2 changelog
+
+* Filename now properly matches the version
+* Automatic runloop reset at the end (once a runloop completes) was not working. Now, you no longer need to manually call runloop.reset() to reuse or re-execute a runloop.
+
 
 ### Runloop is A jQuery Plugin for Comprehensive Animations
 

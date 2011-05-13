@@ -1,4 +1,4 @@
-Runloop 1.0.1
+Runloop 1.0.2
 =============
 
 ### A jQuery Plugin for Comprehensive Animations
@@ -16,7 +16,7 @@ to avoid timing conflicts in the case of doing many multiple .animate() calls.
 
 ### Known issues
 
-Currently there are no known issues for the 1.0.1 release.
+Currently there are no known issues for the 1.0.2 release.
 
 jQuery (1.5 and below) has [a bug in its .animate() step: method](http://bugs.jquery.com/ticket/8188), which triggers
 an error in IE8 and below. The 1.0 version, however, has sidestepped this by
