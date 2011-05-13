@@ -1,7 +1,11 @@
-Runloop 1.0.2 - Documentation
+Runloop 1.0.3 - Documentation
 =============================
 
-## 1.0.2 changelog
+#### 1.0.3 changelog
+
+* New public property on the runloop object: (bool) `isPlaying`.
+
+#### 1.0.2 changelog
 
 * Filename now properly matches the version
 * Automatic runloop reset at the end (once a runloop completes) was not working. Now, you no longer need to manually call runloop.reset() to reuse or re-execute a runloop.
