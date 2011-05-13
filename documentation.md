@@ -45,6 +45,12 @@ This is a simple example:
 
 	loop.play(1000); // duration set in milliseconds
 	</script>
+	
+# Public Properties
+
+## .isPlaying
+
+*boolean* This property will return `true` if a runloop is currently playing, `false` if not.
 
 # Public Methods
 
