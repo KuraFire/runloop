@@ -1,5 +1,5 @@
 /*!
- * jQuery Runloop Plugin -- version 1.0.2
+ * jQuery Runloop Plugin -- version 1.0.3
  * Copyright 2011, Faruk Ates
  * Dual licensed under the MIT or BSD licenses
  *
@@ -25,7 +25,7 @@
       if (settings) $.extend(config, settings);
       
       // Version!
-      var version = "1.0.2",
+      var version = "1.0.3",
       
       // Create the dummy object in nodespace that we're running the animation on
       runloop = document.createElement('div'),
@@ -52,6 +52,8 @@
 
       // Public methods:
       return r = {
+         
+         isPlaying: false,
          
          // Add a keyframe at specified percentage point with code to execute
          addKey: function(atPercentage, func) {
@@ -121,6 +123,8 @@
          // This will not pause any animations triggered by keyframe functions!
          // 
          pause: function() {
+         
+            r.isPlaying = false;
 
             // Get current time interval and store the remaining time
             remainingDuration = currentDuration - Math.round(currentDuration * (Math.floor(currentStep) / 100));
@@ -130,6 +134,12 @@
 
          // Starts playing the runloop; if paused, continues from where it was
          play: function(duration, callback) {
+            
+            // If we're already playing, return/ignore
+            if ( r.isPlaying ) {
+               return;
+            }
+            r.isPlaying = true;
             
             // Default value
             duration = parseInt(duration, 0) || 500;
@@ -185,6 +195,7 @@
                easing: 'linear',
                
                complete: function() {
+                  r.isPlaying = false;
                   r.reset();
                }
             });
