@@ -1,5 +1,5 @@
-/*
- * jQuery Runloop Plugin -- version 1.0.1
+/*!
+ * jQuery Runloop Plugin -- version 1.0.2
  * Copyright 2011, Faruk Ates
  * Dual licensed under the MIT or BSD licenses
  *
@@ -25,7 +25,7 @@
       if (settings) $.extend(config, settings);
       
       // Version!
-      var version = "1.0.1",
+      var version = "1.0.2",
       
       // Create the dummy object in nodespace that we're running the animation on
       runloop = document.createElement('div'),
@@ -41,14 +41,17 @@
       remainingDuration = false,
       currentStep = 0,
       
+      // Our runloop return object
+      r,
+      
       // Private shortcut
       makeAt = function(at) {
-         var val = parseInt(at.toString().match(/[0-9]+/g));
-         return (isNaN(val)) ? false : "at" + val;
+         var val = parseInt(at.toString().match(/[0-9]+/g), 0);
+         return isNaN(val) ? false : "at" + val;
       };
 
       // Public methods:
-      return {
+      return r = {
          
          // Add a keyframe at specified percentage point with code to execute
          addKey: function(atPercentage, func) {
@@ -129,7 +132,7 @@
          play: function(duration, callback) {
             
             // Default value
-            duration = parseInt(duration) || 500;
+            duration = parseInt(duration, 0) || 500;
             
             // If our entire runloop is less than 500ms, simplify map steps to 10% intervals
             if (duration < 500) {
@@ -148,7 +151,7 @@
             //   That said, it can still cause some intervals to get skipped, so it's not recommended
             //   to get into this kind of situation. :)
             
-            // The optional play() callback is just a keyframe 100% function
+            // The optional callback on play() is just a keyframe 100% function
             if (typeof callback == "function") {
                this.addKey('100%', callback);
             }
@@ -182,13 +185,10 @@
                easing: 'linear',
                
                complete: function() {
-                  currentDuration = false;
-                  remainingDuration = false;
-                  currentStep = 0;
-                  execLog = {};
+                  r.reset();
                }
             });
-         }
+         };
       };
   };
 })( jQuery );
